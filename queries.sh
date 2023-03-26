@@ -38,7 +38,7 @@ echo "$($PSQL "select distinct name from teams where team_id in (select distinct
 
 
 echo -e "\nList of unique winning team names in the whole data set:"
-echo "$($PSQL "select distinct name from teams where team_id in (select winner_id from games order by name desc)")"
+echo "$($PSQL "select distinct name from teams where team_id in (select winner_id from games) order by name")"
 
 
 echo -e "\nYear and team name of all the champions:"
